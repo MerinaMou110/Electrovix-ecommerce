@@ -148,7 +148,7 @@ DATABASES = {
         'HOST': env("DB_HOST"),
         'PORT': env("DB_PORT"),
          'OPTIONS': {
-            'sslmode': 'require',
+             'sslmode': 'require' if config('USE_DB_SSL', default=False, cast=bool) else 'disable'
         }
     }
 }
