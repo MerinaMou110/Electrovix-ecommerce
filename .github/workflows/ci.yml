@@ -53,7 +53,7 @@ jobs:
           DB_PORT: 5432
           STORE_ID: test_store_id
           STORE_PASS: test_store_pass
-          USE_DB_SSL: "False"
+          DB_SSLMODE: disable
 
           ISSANDBOX: "True"
           SUCCESS_URL: https://example.com/success
@@ -76,7 +76,7 @@ jobs:
           DB_PORT: 5432
           STORE_ID: test_store_id
           STORE_PASS: test_store_pass
-          USE_DB_SSL: "False"
+          DB_SSLMODE: disable
 
           ISSANDBOX: "True"
           SUCCESS_URL: https://example.com/success
