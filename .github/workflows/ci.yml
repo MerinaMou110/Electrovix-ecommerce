@@ -9,6 +9,7 @@ on:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
+
     services:
       postgres:
         image: postgres:13
@@ -50,6 +51,14 @@ jobs:
           DB_PASSWORD: postgres
           DB_HOST: localhost
           DB_PORT: 5432
+          STORE_ID: test_store_id
+          STORE_PASS: test_store_pass
+          ISSANDBOX: "True"
+          SUCCESS_URL: https://example.com/success
+          FAIL_URL: https://example.com/fail
+          CANCEL_URL: https://example.com/cancel
+          EMAIL: test@example.com
+          EMAIL_PASSWORD: testpassword
 
       - name: Run Tests
         run: |
@@ -63,3 +72,11 @@ jobs:
           DB_PASSWORD: postgres
           DB_HOST: localhost
           DB_PORT: 5432
+          STORE_ID: test_store_id
+          STORE_PASS: test_store_pass
+          ISSANDBOX: "True"
+          SUCCESS_URL: https://example.com/success
+          FAIL_URL: https://example.com/fail
+          CANCEL_URL: https://example.com/cancel
+          EMAIL: test@example.com
+          EMAIL_PASSWORD: testpassword
