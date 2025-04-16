@@ -2,7 +2,6 @@
 
 FROM python:3.11-bullseye
 
-
 # Avoid prompts during package installation
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -26,8 +25,12 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy project files
 COPY . .
 
+# Run migrations and load data
+RUN python manage.py migrate
+RUN python manage.py loaddata data.json
+
 # Expose port (for Gunicorn)
 EXPOSE 8000
 
-# Default command can also be here, but we use docker-compose to run gunicorn
+# Start the server
 CMD ["gunicorn", "backend.wsgi:application", "--bind", "0.0.0.0:8000"]
