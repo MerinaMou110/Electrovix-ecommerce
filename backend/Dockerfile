@@ -30,3 +30,4 @@ COPY . .
 EXPOSE 8000
 
 # Default command can also be here, but we use docker-compose to run gunicorn
+CMD ["gunicorn", "backend.wsgi:application", "--bind", "0.0.0.0:8000"]

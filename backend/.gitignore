@@ -5,7 +5,7 @@ __pycache__/
 
 # Environment variables and secrets
 .env
-
+data.json
 # Django database
 # Uncomment if using SQLite in production (not recommended)
 # db.sqlite3
@@ -18,8 +18,7 @@ __pycache__/
 *.log
 
 # Virtual environments
-venv/
-env/
+
 myenv/
 
 # OS-specific files
