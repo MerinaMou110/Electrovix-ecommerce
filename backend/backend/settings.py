@@ -147,6 +147,9 @@ DATABASES = {
         'PASSWORD': env("DB_PASSWORD"),# Enter the real password
         'HOST': env("DB_HOST"),
         'PORT': env("DB_PORT"),
+         'OPTIONS': {
+            'sslmode': 'require',
+        }
     }
 }
 
