@@ -3,6 +3,16 @@
 
 Electrovix is a modern **fullstack e-commerce platform** built with powerful technologies like **Django REST Framework**, **React**, **PostgreSQL**, **Docker**, and **CI/CD** automation. This project showcases my ability to build scalable, production-ready applications with real-world features and deployment practices.
 
+## 🔐 Demo Credentials
+
+### Admin
+- **Email:** admin@example.com  
+- **Password:** 123
+
+### Regular User
+- **Email:** akterraina013@gmail.com
+- **Password:** raina@123
+
 
 ## 🚀 Tech Stack
 
